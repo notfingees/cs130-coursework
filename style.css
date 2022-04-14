@@ -1,0 +1,57 @@
+/* You're welcome to change any of this! */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Nunito:wght@700&family=Roboto+Mono&family=Source+Sans+Pro&display=swap');
+body {
+   font-family: 'Lato', sans-serif;
+/*    font-size: 1.3em; */
+}
+
+h1 {
+   font-family: 'Nunito', sans-serif;
+   text-transform: uppercase;
+   font-size:  2.5em;
+
+}
+
+h2 {
+font-family: 'Nunito', sans-serif;
+   text-transform: uppercase;
+   font-size:  1.5em;
+    text-decoration: underline;
+
+}
+
+.images_image{
+    width: 20vw;
+    height: auto;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Courier Prime', monospace;
+}
+header, section {
+    padding: 20px;
+}
+p, li {
+    line-height: 1.5em;
+}
+
+#inspiration {
+    /*background-color: #F0F0F0;*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section:hover {
+    background-color: #F0F0F0;
+}
+
+a{
+    color: black;
+}
