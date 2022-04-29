@@ -82,6 +82,16 @@ footer {
 
 /* Your Code Here */
 
+#sidebar i {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#sidebar a {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
 
 
 /********************************/
@@ -89,6 +99,36 @@ footer {
 /********************************/
 
 /* Your Code Here */
+.navigation {
+    display: flex;
+    gap: 5vw;
+    padding-left: 5vw;
+}
+
+.upgrade_and_profile {
+    display: flex;
+    gap: 5vw;
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+}
+
+#upgrade {
+    border: 1px solid white;
+    border-radius: 2vw;
+    padding: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#profile {
+    border-radius: 2vw;
+    padding: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: darkgrey;
+}
+
 
 
 
@@ -100,6 +140,37 @@ footer {
 
 /* Your Code Here */
 
+.featured_content_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2vw;
+    padding: 2vw;
+    
+}
+
+.artist-card {
+    width: 13vw;
+    border-radius: 2vw;
+    background-color: #222;
+    padding-bottom: 10vh;
+}
+
+
+.card-footer {
+    padding-left: 2vw;
+}
+
+img {
+    width: 10vw;
+    margin-left: 1.5vw;
+    margin-top: 2.5vw;
+    border-radius: 10vw;
+}
+
+.artist-card p {
+    opacity: 0.6;
+}
+
 
 
 
@@ -109,4 +180,39 @@ footer {
 
 /* Your Code Here */
 
+
+@media (max-width: 900px) { /* table */
+    .featured_content_div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2vw;
+        padding: 2vw;
+        
+    }
+
+}
+
+
+@media (max-width: 600px) { /* table */
+    .featured_content_div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2vw;
+        padding: 2vw;
+        
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    main {
+        width: 100vw;
+        margin-left: -65vw;
+    }
+
+    .artist-card {
+        width: 35vw;
+    }
+    }
 
