@@ -1,0 +1,12 @@
+Accessibility questions:
+1. I had to add aria-label to the control panel at the bottom (for the next song, previous song, play/pause buttons) and alt captions for the images. I also had to change some of the colors because there were contrast issues. 
+
+2. I think the website is usable if you turn off the CSS, because the styling is not currently providing any additional value (e.g. visual indicators of what is being selected), and so the actual user experience would only be hindered by less convenient visuals/design/styling
+
+3. All links and buttons are accessible by the tab key so the website is tabbable. 
+
+Home page:
+https://notfingees.github.io/cs130-coursework/index.html
+
+Repository:
+https://github.com/notfingees/cs130-coursework
