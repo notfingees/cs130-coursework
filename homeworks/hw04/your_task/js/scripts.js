@@ -21,11 +21,11 @@ const getTracks = (term) => {
         get tracks from spotify based on the search term
         "${term}" and load them into the #tracks section 
         of the DOM...`);
-        fetch('https://www.apitutor.org/spotify/simple/v1/search?type=track&q=' + term).then(response => response.json())
+    fetch('https://www.apitutor.org/spotify/simple/v1/search?type=track&q=' + term).then(response => response.json())
         .then(data => {
 
 
-            if (data.length == 0){
+            if (data.length == 0) {
                 document.querySelector('#tracks').innerHTML = `
                 <button class="track-item preview" aria-label="No songs found">
                       
@@ -40,10 +40,10 @@ const getTracks = (term) => {
                 `
             }
             var max = 5
-            if (data.length < 5){
+            if (data.length < 5) {
                 max = data.length
             }
-            for (var i=0; i<max; i++){
+            for (var i = 0; i < max; i++) {
                 document.querySelector('#tracks').innerHTML += `
                 <button aria-label="Preview ${data[i]['name']}" class="track-item preview" data-preview-track="${data[i]['preview_url']}" onclick="handleTrackClick('${data[i]['preview_url']}', '${data[i]['album']['image_url']}', '${data[i]['name']}', '${data[i]['artist']['name']}')">
                         <img alt="Track cover for ${data[i]['name']}" src="${data[i]['album']['image_url']}">
@@ -69,13 +69,13 @@ const getAlbums = (term) => {
         "${term}" and load them into the #albums section 
         of the DOM...`);
 
-        fetch('https://www.apitutor.org/spotify/simple/v1/search?type=album&q=' + term).then(response => response.json())
+    fetch('https://www.apitutor.org/spotify/simple/v1/search?type=album&q=' + term).then(response => response.json())
         .then(data => {
 
             console.log("albums", data)
-    
-    
-            if (data.length == 0){
+
+
+            if (data.length == 0) {
                 document.querySelector('#albums').innerHTML = `
                 <section class="album-card">
                 <div>
@@ -83,9 +83,9 @@ const getAlbums = (term) => {
                 </div>
             </section>`
             }
-            else{
-            for (var i=0; i < data.length; i++){
-            document.querySelector('#albums').innerHTML += `
+            else {
+                for (var i = 0; i < data.length; i++) {
+                    document.querySelector('#albums').innerHTML += `
             <section class="album-card" id="${data[i]['id']}">
                         <div>
                             <img alt='Album cover for ${data[i]['name']}'src="${data[i]['image_url']}">
@@ -98,11 +98,11 @@ const getAlbums = (term) => {
                         </div>
                     </section>
                     `
+                }
             }
-        }
-            
-            
-            
+
+
+
         });
 
 
@@ -114,11 +114,11 @@ const getArtist = (term) => {
         "${term}" and load the first artist into the #artist section 
         of the DOM...`);
     fetch('https://www.apitutor.org/spotify/simple/v1/search?type=artist&q=' + term).then(response => response.json())
-    .then(data => {
+        .then(data => {
 
 
-        if (data.length == 0){
-            document.querySelector('#artist').innerHTML = `
+            if (data.length == 0) {
+                document.querySelector('#artist').innerHTML = `
         <section id="artist-section">
                     <h1>Top Result</h1>
                     <section id="artist">
@@ -129,9 +129,9 @@ const getArtist = (term) => {
                         </section>
                     </section>
                 </section>`
-        }
-        else{
-        document.querySelector('#artist').innerHTML = `
+            }
+            else {
+                document.querySelector('#artist').innerHTML = `
         <section id="artist-section">
                     <h1>Top Result</h1>
                     <section id="artist">
@@ -148,16 +148,16 @@ const getArtist = (term) => {
                         </section>
                     </section>
                 </section>`
-        }
-        
-        
-        
-    });
+            }
 
-    
+
+
+        });
+
+
 };
 
-function handleTrackClick(preview, image, track_name, album){
+function handleTrackClick(preview, image, track_name, album) {
 
     console.log("in here with", preview, image, track_name, album)
 
@@ -178,8 +178,12 @@ function handleTrackClick(preview, image, track_name, album){
 
 document.querySelector('#search').onkeyup = (ev) => {
     // Number 13 is the "Enter" key on the keyboard
+
     console.log(ev.keyCode);
     if (ev.keyCode === 13) {
+        document.querySelector('#artist').innerHTML = ""
+        document.querySelector('#albums').innerHTML = ""
+        document.querySelector('#tracks').innerHTML = ""
         ev.preventDefault();
         search();
     }

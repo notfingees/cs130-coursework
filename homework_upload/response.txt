@@ -1,9 +1,9 @@
 Accessibility questions:
-1. I had to add aria-label to the control panel at the bottom (for the next song, previous song, play/pause buttons) and alt captions for the images. I also had to change some of the colors because there were contrast issues. 
+1. I had to add unique aria-labels and alt texts for every interactable element and image, respectively, and I did so by using the given Spotify IDs or artist names 
 
-2. I think the website is usable if you turn off the CSS, because the styling is not currently providing any additional value (e.g. visual indicators of what is being selected), and so the actual user experience would only be hindered by less convenient visuals/design/styling
+2. The interface is functional without the use of the mouse because you can tab through all the elements (e.g. buttons and links) that are required for interacting with the interface 
 
-3. All links and buttons are accessible by the tab key so the website is tabbable. 
+3. It would be interesting to see what accessibility features are provided by Spotify/music-related technology in general for people who have auditory disabilities 
 
 Home page:
 https://notfingees.github.io/cs130-coursework/index.html
